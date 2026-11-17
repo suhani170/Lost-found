@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Item Details | Lost & Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/item-details.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div class="brand-text">
+                <h2>Lost & Found</h2>
+                <span>Helping you find what matters</span>
+            </div>
+
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html">Home</a>
+            <a href="lost-items.html">Lost Items</a>
+            <a href="found-items.html" id="foundNav">Found Items</a>
+            <a href="report-item.html">Report Item</a>
+            <a href="about.html">About Us</a>
+
+        </nav>
+
+        <a href="login.html" class="login-btn">
+            Login
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="details-page">
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <div class="details-container">
+
+        <a href="lost-items.html" class="back-link">
+            <span class="back-icon">
+                <i class="fa-solid fa-arrow-left"></i>
+            </span>
+            <span id="backText">Back to lost items</span>
+        </a>
+
+
+        <section class="hero-card">
+
+            <div class="image-panel">
+
+                <div class="image-wrapper">
+
+                    <img id="itemImage" src="" alt="Item image">
+
+                    <div class="image-placeholder" id="imagePlaceholder">
+
+                        <div class="placeholder-circle">
+                            <i id="placeholderIcon" class="fa-solid fa-box-open"></i>
+                        </div>
+
+                        <h3>No image available</h3>
+
+                        <p>Image has not been uploaded for this item.</p>
+
+                    </div>
+
+                    <div class="image-badge">
+                        <i class="fa-solid fa-camera"></i>
+                        Item photo
+                    </div>
+
+                </div>
+
+                <div class="image-thumbnails" id="imageThumbnails"></div>
+
+            </div>
+
+
+            <div class="details-content">
+
+                <div class="top-row">
+
+                    <span class="status-badge" id="itemStatus">
+                        <span class="status-dot"></span>
+                        Lost
+                    </span>
+
+                    <button type="button" class="small-share-btn" id="shareBtn">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Share</span>
+                    </button>
+
+                </div>
+
+
+                <div class="category-label" id="itemCategory">
+                    Electronics
+                </div>
+
+
+                <h1 id="itemName">
+                    Black Smartphone
+                </h1>
+
+
+                <p class="item-description" id="itemDescription">
+                    Black smartphone with a transparent protective case.
+                </p>
+
+
+                <div class="detail-list">
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div class="detail-text">
+                            <span id="locationLabel">Lost Location</span>
+                            <strong id="itemLocation">Main Campus</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div class="detail-text">
+                           <span id="dateLabel">Date Lost</span>
+                           <strong id="itemDate">6 September 2026</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+
+                        <div class="detail-text">
+                            <span>Reported By</span>
+                            <strong id="reportedBy">John Doe</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <div class="detail-text">
+                            <span>Contact</span>
+                            <strong id="contactInfo">johndoe@gmail.com</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="action-area">
+
+                    <button type="button" class="contact-btn" id="contactOwnerBtn">
+                        <span class="button-icon">
+                            <i class="fa-regular fa-comment-dots"></i>
+                        </span>
+
+                        <span>
+                            <strong>Contact Owner</strong>
+                            <small>Get in touch with the reporter</small>
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right button-arrow"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="trust-row">
+
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Safe & responsible contact</strong>
+                        <span>Protect your personal information when contacting others.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="information-section">
+
+            <div class="section-title">
+
+                <div class="section-title-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div>
+                    <span>MORE DETAILS</span>
+                    <h2>Item Information</h2>
+                </div>
+
+            </div>
+
+
+            <div class="information-grid">
+
+                <div class="info-box">
+
+                    <div class="info-box-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+                        <span>Category</span>
+                        <strong id="infoCategory">Electronics</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-box-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Status</span>
+                        <strong id="infoStatus">Lost</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-box-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <strong id="infoLocation">Main Campus</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-box-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+
+                    <div>
+                        <span>Reported Date</span>
+                        <strong id="infoDate">6 September 2026</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="safety-section">
+
+            <div class="safety-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="safety-content">
+
+                <div class="safety-heading">
+                    <span>SAFETY FIRST</span>
+                    <h3>Stay safe while returning an item</h3>
+                </div>
+
+                <p>
+                    Never share passwords, OTPs or sensitive personal information.
+                    Meet in a safe public place when returning an item.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Lost & Found</h3>
+                <p>Helping people find what matters.</p>
+            </div>
+
+        </div>
+        <p class="copyright">
+            © 2026 Lost & Found. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div class="modal-overlay" id="contactModal">
+
+    <div class="contact-modal">
+
+        <button type="button" class="modal-close" id="modalClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-top">
+
+            <div class="modal-icon">
+                <i class="fa-regular fa-comment-dots"></i>
+            </div>
+
+            <div>
+                <span>CONTACT REPORTER</span>
+                <h2>Contact Owner</h2>
+            </div>
+
+        </div>
+
+
+        <p class="modal-description">
+            Choose a contact method below to get in touch with the person
+            who reported this item.
+        </p>
+
+
+        <div class="contact-details">
+
+            <a id="emailLink" href="#">
+
+                <div class="contact-method-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong id="modalEmail">johndoe@gmail.com</strong>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a id="phoneLink" href="#">
+
+                <div class="contact-method-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <span>Phone</span>
+                    <strong id="modalPhone">+91 98765 43210</strong>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+
+        <button type="button" class="modal-email-btn" id="sendEmailBtn">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            Send Email
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-check"></i>
+    <span>Link copied successfully!</span>
+</div>
+
+
+<script src="js/item-details.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Item | Lost & Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/report-item.css">
+</head>
+
+<body>
+
+<!--navbar-->
+<header class="site-header">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="brand-text">
+                <strong>Lost & Found</strong>
+                <span>Helping you find what matters</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lost-items.html">Lost Items</a>
+            <a href="found-items.html">Found Items</a>
+            <a href="report-item.html" class="active">Report Item</a>
+            <a href="about.html">About Us</a>
+        </nav>
+
+        <a href="login.html" class="login">
+            Login <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+</header>
+
+<!--report form-->
+<main class="page">
+
+    <div class="shape shape-one"></div>
+    <div class="shape shape-two"></div>
+
+    <section class="report-card">
+
+        <div class="heading">
+            <span><i class="fa-solid fa-pen-to-square"></i> REPORT AN ITEM</span>
+            <h1>Report Lost or Found Item</h1>
+            <p>Fill in the details below to report an item.</p>
+        </div>
+
+        <form id="reportForm">
+
+            <div class="type-select">
+                <label>
+                    <input type="radio" name="type" value="Lost" checked>
+                    <span><i class="fa-solid fa-check"></i></span>
+                    Lost Item
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="Found">
+                    <span><i class="fa-solid fa-check"></i></span>
+                    Found Item
+                </label>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="field">
+                    <label>Item Name</label>
+                    <input type="text" id="itemName" placeholder="Enter item name" required>
+                </div>
+
+                <div class="field">
+                    <label>Category</label>
+                    <div class="select-box">
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option>Electronics</option>
+                            <option>Keys</option>
+                            <option>Bags</option>
+                            <option>Documents</option>
+                            <option>Accessories</option>
+                            <option>Other</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Location</label>
+                    <input type="text" id="location" placeholder="Where did you lose/find it?" required>
+                </div>
+
+                <div class="field">
+                    <label>Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="field">
+                    <label>Description</label>
+                    <textarea id="description" placeholder="Provide more details about the item." required></textarea>
+                </div>
+
+                <div class="field">
+                    <label>Upload Image</label>
+
+                    <label class="upload-box" for="image">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <strong>Click to upload or drag and drop</strong>
+                        <small>PNG, JPG up to 5MB</small>
+                        <input type="file" id="image" accept="image/png,image/jpeg">
+                    </label>
+
+                    <p class="file-name" id="fileName"></p>
+                </div>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Report
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<!--footer-->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Lost & Found</h3>
+                <p>Helping people find what matters.</p>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Lost & Found. All rights reserved.</p>
+
+    </div>
+</footer>
+
+<script src="js/report-item.js"></script>
+
+</body>
+</html>

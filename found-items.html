@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Found Items | Lost & Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/found-items.css">
+</head>
+
+<body>
+
+<!-- navbar -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div class="brand-text">
+                <strong>Lost & Found</strong>
+                <span>Helping you find what matters</span>
+            </div>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="lost-items.html">Lost Items</a>
+            <a href="found-items.html" class="active">Found Items</a>
+            <a href="report-item.html">Report Item</a>
+            <a href="about.html">About Us</a>
+
+            <a href="login.html" class="login-btn">
+                Login
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="page">
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <!-- hero -->
+    <section class="hero-section">
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                <i class="fa-solid fa-box-open"></i>
+                FIND A FOUND ITEM
+            </div>
+
+            <h1>
+                Found <span>Items</span>
+            </h1>
+
+            <p>
+                Browse items that have been found and reported by people
+                on campus.
+            </p>
+
+        </div>
+
+        <form class="search-box" id="searchForm">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search found items..."
+                autocomplete="off"
+            >
+
+            <button type="submit">Search</button>
+
+        </form>
+
+    </section>
+
+    <!-- filters -->
+    <section class="filter-section">
+
+        <div class="filter-top">
+
+            <div class="filter-title">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Filter items</span>
+            </div>
+
+            <button class="clear-btn" id="clearFilters">
+                Clear all
+            </button>
+
+        </div>
+
+        <div class="filters">
+
+            <div class="filter-box">
+                <i class="fa-solid fa-table-cells"></i>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="keys">Keys</option>
+                    <option value="bags">Bags</option>
+                    <option value="documents">Documents</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="wallet">Wallet</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="filter-box">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <select id="locationFilter">
+                    <option value="all">All Locations</option>
+                    <option value="main-campus">Main Campus</option>
+                    <option value="library">Library</option>
+                    <option value="parking">Parking Area</option>
+                    <option value="cafeteria">Cafeteria</option>
+                    <option value="hostel">Hostel</option>
+                    <option value="canteen">Canteen</option>
+                    <option value="classroom">Classroom</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="filter-box">
+                <i class="fa-regular fa-calendar"></i>
+
+                <select id="dateFilter">
+                    <option value="all">All Dates</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- results -->
+    <section class="results-section">
+
+        <div class="results-header">
+
+            <div class="results-heading">
+
+                <div class="heading-line"></div>
+
+                <div>
+                    <h2>Recently Found</h2>
+                    <p id="resultCount">Showing 6 found items</p>
+                </div>
+
+            </div>
+
+            <div class="sort-wrapper">
+                <span>Sort by</span>
+
+                <select id="sortFilter">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="az">Name A–Z</option>
+                    <option value="za">Name Z–A</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="items-grid" id="itemsGrid">
+
+            <!-- item 1 -->
+            <article class="item-card"
+                data-category="wallet"
+                data-location="library"
+                data-date="2026-09-05"
+                data-name="Brown Leather Wallet">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Wallet</span>
+
+                    <h3>Brown Leather Wallet</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Library
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            5 Sep 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        Brown leather wallet found near the library entrance.
+                    </p>
+
+                    <a href="item-details.html?id=brown-wallet" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- item 2 -->
+            <article class="item-card"
+                data-category="electronics"
+                data-location="classroom"
+                data-date="2026-09-04"
+                data-name="Wireless Earbuds">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-ear-listen"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Electronics</span>
+
+                    <h3>Wireless Earbuds</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Classroom
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            4 Sep 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        White wireless earbuds found inside a classroom.
+                    </p>
+
+                    <a href="item-details.html?id=found-earbuds" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- item 3 -->
+            <article class="item-card"
+                data-category="keys"
+                data-location="parking"
+                data-date="2026-09-03"
+                data-name="Set of Car Keys">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Keys</span>
+
+                    <h3>Set of Car Keys</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Parking Area
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            3 Sep 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        Two car keys attached to a small black keychain.
+                    </p>
+
+                    <a href="item-details.html?id=found-car-keys" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- item 4 -->
+            <article class="item-card"
+                data-category="bags"
+                data-location="main-campus"
+                data-date="2026-09-02"
+                data-name="Black College Backpack">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Bags</span>
+
+                    <h3>Black College Backpack</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Main Campus
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            2 Sep 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        Black backpack found with books and a water bottle.
+                    </p>
+
+                    <a href="item-details.html?id=found-backpack" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- item 5 -->
+            <article class="item-card"
+                data-category="documents"
+                data-location="cafeteria"
+                data-date="2026-09-01"
+                data-name="Student ID Card">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Documents</span>
+
+                    <h3>Student ID Card</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Cafeteria
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            1 Sep 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        College identification card found near the cafeteria.
+                    </p>
+
+                    <a href="item-details.html?id=found-student-id" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- item 6 -->
+            <article class="item-card"
+                data-category="accessories"
+                data-location="canteen"
+                data-date="2026-08-30"
+                data-name="Silver Wrist Watch">
+
+                <div class="item-image">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <span class="lost-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        Found
+                    </span>
+                </div>
+
+                <div class="item-content">
+                    <span class="category">Accessories</span>
+
+                    <h3>Silver Wrist Watch</h3>
+
+                    <div class="item-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Canteen
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            30 Aug 2026
+                        </span>
+                    </div>
+
+                    <p>
+                        Silver wrist watch with a dark leather strap.
+                    </p>
+
+                    <a href="item-details.html?id=found-watch" class="details-btn">
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h3>No found items found</h3>
+
+            <p>
+                We couldn't find any item matching your search or filters.
+            </p>
+
+            <button id="emptyClear">Clear Filters</button>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+
+    </section>
+
+</main>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Lost & Found</h3>
+                <p>Helping people find what matters.</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+            © 2026 Lost & Found. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+<script src="js/found-items.js"></script>
+
+</body>
+</html>

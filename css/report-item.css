@@ -1,0 +1,100 @@
+/*---reset---*/
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"DM Sans",sans-serif;color:#18162d;background:#faf9ff}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:inherit}
+
+/*---navbar---*/
+.site-header{height:86px;background:#fff;border-bottom:1px solid #ece9f7}
+.nav-container{width:min(1350px,calc(100% - 48px));height:100%;margin:auto;display:flex;align-items:center;gap:25px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-icon,.footer-icon{display:grid;place-items:center;background:#eeeaff;color:#5b3df5;border-radius:16px}
+.brand-icon{width:56px;height:56px;font-size:24px}
+.brand-text strong{display:block;font:700 21px "Plus Jakarta Sans"}
+.brand-text span{font-size:12px;color:#77738d}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{padding:12px 16px;border-radius:13px;font-size:14px;font-weight:700}
+nav a:hover,nav .active{color:#5737ef;background:#eeeaff}
+.login{padding:14px 24px;background:#5b35ed;color:#fff;border-radius:14px;font-weight:700;box-shadow:0 10px 25px #5b35ed35}
+.login i{margin-left:8px}
+
+/*---page---*/
+.page{min-height:calc(100vh - 218px);padding:55px 20px;position:relative;overflow:hidden}
+.shape{position:absolute;border-radius:50%;background:#eeeaff;opacity:.6;z-index:-1}
+.shape-one{width:300px;height:300px;right:-120px;top:20px}
+.shape-two{width:230px;height:230px;left:-130px;bottom:20px}
+
+/*---card---*/
+.report-card{width:min(1050px,100%);margin:auto;padding:32px 45px 36px;background:#fff;border:1px solid #e7e2f5;border-radius:25px;box-shadow:0 20px 55px #38277c16}
+.heading span{color:#5b35ed;font-size:12px;font-weight:800;letter-spacing:1.5px}
+.heading h1{font:700 27px "Plus Jakarta Sans";margin-top:9px}
+.heading p{margin-top:7px;color:#858096;font-size:14px}
+
+/*---type---*/
+.type-select{display:flex;align-items:center;justify-content:flex-end;gap:25px;margin:8px 0 18px}
+.type-select label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;cursor:pointer}
+.type-select input{display:none}
+.type-select label span{width:18px;height:18px;display:grid;place-items:center;border:1.5px solid #777;border-radius:50%;color:#fff;font-size:9px}
+.type-select input:checked+span{border-color:#5b35ed;background:#5b35ed}
+
+/*---form---*/
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 55px}
+.field label{display:block;margin:0 0 5px 2px;font-size:12px;font-weight:700}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid #d8d4df;border-radius:9px;outline:0;background:#fff;color:#4e4a5b;font-size:13px;transition:.2s}
+.field input,.field select{height:43px;padding:0 12px}
+.field textarea{height:76px;padding:10px 12px;resize:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#5b35ed;box-shadow:0 0 0 3px #5b35ed12}
+.field input::placeholder,.field textarea::placeholder{color:#aaa6b3}
+.select-box{position:relative}
+.select-box select{appearance:none;padding-right:35px}
+.select-box i{position:absolute;right:14px;top:15px;color:#777;pointer-events:none;font-size:12px}
+
+/*---upload---*/
+.upload-box{height:76px!important;border:1.5px dashed #a99cf5!important;border-radius:10px!important;background:#f7f4ff!important;display:flex!important;align-items:center;justify-content:center;flex-direction:column;gap:3px;cursor:pointer;color:#5b35ed}
+.upload-box>i{font-size:23px}
+.upload-box strong{font-size:11px}
+.upload-box small{font-size:9px;color:#77738d}
+.upload-box input{display:none}
+.file-name{text-align:center;font-size:10px;color:#5b35ed;margin-top:5px}
+
+/*---button---*/
+.submit-btn{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto 0;padding:12px 25px;border:0;border-radius:9px;color:#fff;background:#5b35ed;font-size:12px;font-weight:700;box-shadow:0 8px 20px #5b35ed30;transition:.2s}
+.submit-btn:hover{background:#492bd5;transform:translateY(-2px)}
+
+/*---footer---*/
+.footer{background:#17132d;color:#fff}
+.footer-container{width:min(1350px,calc(100% - 48px));min-height:132px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-icon{width:46px;height:46px;display:grid;place-items:center;background:#5b35ed;color:#fff;border-radius:14px;font-size:18px}
+.footer h3{font:700 17px "Plus Jakarta Sans";margin:0}
+.footer p{font-size:11px;color:#aaa5bf;margin:3px 0 0}
+.copyright{margin:0!important}
+
+@media(max-width:600px){
+    .footer-container{width:calc(100% - 28px);padding:25px 0;gap:15px}
+    .footer-brand{gap:10px}
+    .footer h3{font-size:15px}
+    .footer p{font-size:10px}
+}
+
+/*---mobile---*/
+@media(max-width:850px){
+.nav-container{flex-wrap:wrap;height:auto;padding:10px 0}
+.site-header{height:auto}
+nav{order:3;width:100%;overflow:auto;margin:0}
+.report-card{padding:28px 25px}
+.form-grid{grid-template-columns:1fr;gap:14px}
+.type-select{justify-content:flex-start;margin-top:20px}
+}
+
+@media(max-width:600px){
+.nav-container,.footer-container{width:calc(100% - 28px)}
+.brand span{display:none}
+nav a{padding:9px 10px;font-size:12px}
+.login{padding:11px 15px}
+.page{padding:25px 12px}
+.report-card{padding:22px 17px;border-radius:20px}
+.heading h1{font-size:23px}
+.type-select{gap:15px;flex-wrap:wrap}
+.footer-container{padding:25px 0;gap:15px;flex-direction:column;align-items:flex-start}
+}

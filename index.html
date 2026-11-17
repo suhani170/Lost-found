@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found - Home</title>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+    <div class="nav-container">
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+        <div class="brand-icon">
+            <i class="bi bi-geo-alt"></i>
+        </div>
+
+        <div class="brand-text">
+            <span class="brand-name">Lost & Found</span>
+            <span class="brand-tagline">Helping you find what matters</span>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="lost-items.html" class="nav-link">Lost Items</a>
+        <a href="found-items.html" class="nav-link">Found Items</a>
+        <a href="report-item.html" class="nav-link">Report Item</a>
+        <a href="admin/admin-login.html" class="nav-link">Admin</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        
+    </nav>
+
+    <!-- Login -->
+    <a href="login.html" class="login-btn">
+        Login
+        <i class="bi bi-arrow-right"></i>
+    </a>
+
+</div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<main class="hero">
+<!-- Decorative background -->
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+<div class="dots"></div>
+
+<div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+    <section class="hero-content">
+
+        <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            LOST & FOUND COMMUNITY
+        </div>
+
+        <h1>
+            Lost something?
+            <span>We'll help you<br>find it.</span>
+        </h1>
+
+        <p class="hero-description">
+            Lost your belongings or found something that belongs to
+            someone else? Report it and help reunite people with
+            their belongings.
+        </p>
+
+        <!-- Search -->
+        <div class="search-box">
+            <i class="bi bi-search search-icon"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for items e.g. wallet, phone, bag..."
+            >
+
+            <button onclick="searchItems()">
+                <i class="bi bi-search"></i>
+                Search
+            </button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hero-buttons">
+            <a href="#" class="primary-btn">
+                <i class="bi bi-plus-circle"></i>
+                Report Lost Item
+            </a>
+
+            <a href="#" class="secondary-btn">
+                <i class="bi bi-check-circle"></i>
+                Report Found Item
+            </a>
+        </div>
+
+    </section>
+
+    <!-- RIGHT VISUAL -->
+    <section class="hero-visual">
+
+        <!-- Large background circle -->
+        <div class="visual-circle"></div>
+
+        <!-- Main Card -->
+        <div class="find-card">
+
+            <div class="card-icon">
+                <i class="bi bi-search"></i>
+            </div>
+
+            <h2>Find What Matters</h2>
+
+            <p>
+                Your lost item might be closer than you think.
+            </p>
+
+            <div class="card-line"></div>
+
+            <div class="card-stats">
+
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <strong>Lost</strong>
+                    <span>Items reported</span>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <strong>Found</strong>
+                    <span>Items returned</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Floating Key -->
+        <div class="floating-card key-card">
+            <i class="bi bi-key-fill"></i>
+        </div>
+
+        <!-- Floating Bag -->
+        <div class="floating-card bag-card">
+            <i class="bi bi-backpack4"></i>
+        </div>
+
+        <!-- Small decorative circle -->
+        <div class="small-circle"></div>
+
+    </section>
+
+</div>
+
+
+</main>
+
+<!-- ================= SIMPLE LOWER SECTION ================= -->
+
+<section class="quick-section">
+    <div class="quick-container">
+
+    <div class="quick-title">
+        <span>HOW IT WORKS</span>
+        <h2>Finding lost items made simple.</h2>
+    </div>
+
+    <div class="quick-cards">
+
+        <div class="quick-card">
+            <div class="quick-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <h3>Search</h3>
+            <p>Look through reported lost and found items.</p>
+        </div>
+
+        <div class="quick-card">
+            <div class="quick-icon">
+                <i class="bi bi-file-earmark-plus"></i>
+            </div>
+            <h3>Report</h3>
+            <p>Tell the community about your lost or found item.</p>
+        </div>
+
+        <div class="quick-card">
+            <div class="quick-icon">
+                <i class="bi bi-heart"></i>
+            </div>
+            <h3>Reconnect</h3>
+            <p>Help belongings return to the people who own them.</p>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+<script>
+    function searchItems() {
+        const input = document.getElementById("searchInput");
+        const value = input.value.trim();
+
+        if (value === "") {
+            input.focus();
+            return;
+        }
+
+        alert("Searching for: " + value);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+/*---reset---*/
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"DM Sans",sans-serif;color:#18162d;background:#faf9ff}
+a{text-decoration:none;color:inherit}
+button,input{font-family:inherit}
+
+/*---navbar---*/
+.site-header{height:86px;background:#fff;border-bottom:1px solid #ece9f7}
+.nav-container{width:min(1350px,calc(100% - 48px));height:100%;margin:auto;display:flex;align-items:center;gap:25px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-icon{width:56px;height:56px;display:grid;place-items:center;background:#eeeaff;color:#5b3df5;border-radius:16px;font-size:24px}
+.brand h2{font:700 21px "Plus Jakarta Sans"}
+.brand span{font-size:12px;color:#77738d}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{padding:12px 16px;border-radius:13px;font-size:14px;font-weight:700}
+nav a:hover{color:#5737ef;background:#eeeaff}
+.login{padding:14px 24px;background:#5b35ed;color:#fff;border-radius:14px;font-weight:700;box-shadow:0 10px 25px #5b35ed35}
+.login i{margin-left:8px}
+
+/*---page---*/
+.page{min-height:calc(100vh - 218px);display:grid;place-items:center;padding:45px 20px}
+
+/*---login card---*/
+.login-card{width:min(420px,100%);padding:38px 42px;background:#fff;border:1px solid #e7e2f5;border-radius:24px;text-align:center;box-shadow:0 20px 50px #33247714}
+.login-icon{width:58px;height:58px;margin:auto;display:grid;place-items:center;background:#eeeaff;color:#5b35ed;border-radius:17px;font-size:22px}
+.login-card h1{font:800 28px "Plus Jakarta Sans";margin-top:17px}
+.subtitle{margin:7px 0 27px;color:#888397;font-size:13px}
+
+/*---form---*/
+.field{text-align:left;margin-bottom:17px}
+.field label{display:block;margin:0 0 6px 2px;font-size:12px;font-weight:700}
+.password-label{display:flex;justify-content:space-between;align-items:center}
+.password-label a{font-size:11px;color:#5b35ed}
+.input-box{height:45px;display:flex;align-items:center;gap:10px;padding:0 12px;border:1.5px solid #d9d5e2;border-radius:10px}
+.input-box:focus-within{border-color:#5b35ed;box-shadow:0 0 0 3px #5b35ed12}
+.input-box>i{color:#77738d;font-size:14px}
+.input-box input{width:100%;border:0;outline:0;font-size:13px;color:#333}
+.input-box input::placeholder{color:#aaa6b3}
+.input-box button{border:0;background:none;color:#858095;cursor:pointer}
+
+.login-btn{width:100%;height:45px;border:0;border-radius:10px;background:#5b35ed;color:#fff;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px #5b35ed30}
+.login-btn:hover{background:#4b2bd5}
+.login-btn i{margin-left:7px}
+.signup{margin-top:22px;color:#858095;font-size:12px}
+.signup a{color:#5b35ed;font-weight:700}
+
+/*---footer---*/
+.footer{background:#17132d;color:#fff}
+.footer-container{width:min(1350px,calc(100% - 48px));min-height:132px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-icon{width:46px;height:46px;display:grid;place-items:center;background:#5b35ed;color:#fff;border-radius:14px}
+.footer h3{font:700 17px "Plus Jakarta Sans"}
+.footer p{font-size:11px;color:#aaa5bf}
+.copyright{margin:0!important}
+
+/*---mobile---*/
+@media(max-width:850px){
+    .nav-container{flex-wrap:wrap;height:auto;padding:10px 0}
+    .site-header{height:auto}
+    nav{order:3;width:100%;overflow:auto;margin:0}
+}
+@media(max-width:600px){
+    .nav-container,.footer-container{width:calc(100% - 28px)}
+    .brand span{display:none}
+    nav a{padding:9px 10px;font-size:12px}
+    .login{padding:11px 15px}
+    .page{padding:30px 15px}
+    .login-card{padding:30px 20px;border-radius:20px}
+    .login-card h1{font-size:25px}
+    .footer-container{padding:25px 0;gap:15px}
+}

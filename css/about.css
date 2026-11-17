@@ -1,0 +1,58 @@
+/*---reset---*/
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"DM Sans",sans-serif;color:#18162d;background:#faf9ff}
+a{text-decoration:none;color:inherit}
+
+/*---navbar---*/
+.site-header{height:86px;background:#fff;border-bottom:1px solid #ece9f7}
+.nav-container{width:min(1350px,calc(100% - 48px));height:100%;margin:auto;display:flex;align-items:center;gap:25px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-icon{width:56px;height:56px;display:grid;place-items:center;background:#eeeaff;color:#5b3df5;border-radius:16px;font-size:24px}
+.brand h2{font:700 21px "Plus Jakarta Sans"}
+.brand span{font-size:12px;color:#77738d}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{padding:12px 16px;border-radius:13px;font-size:14px;font-weight:700}
+nav a:hover,nav .active{color:#5737ef;background:#eeeaff}
+.login{padding:14px 24px;background:#5b35ed;color:#fff;border-radius:14px;font-weight:700;box-shadow:0 10px 25px #5b35ed35}
+.login i{margin-left:8px}
+
+/*---main---*/
+.page{min-height:calc(100vh - 218px);width:min(1050px,calc(100% - 40px));margin:auto;padding:55px 20px 70px}
+.about-card{max-width:850px;margin:auto;padding:42px 55px;background:linear-gradient(135deg,#f5f2ff,#eeeaff);border:1px solid #e4defb;border-radius:28px;text-align:center;box-shadow:0 18px 40px #4930a520}
+.about-card h1{font:800 36px "Plus Jakarta Sans";margin-bottom:12px}
+.about-card p{max-width:720px;margin:auto;font-size:19px;line-height:1.55;color:#77738d}
+
+.links{max-width:850px;margin:35px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.links>div{padding:24px 28px;background:#fff;border:1px solid #e9e5f5;border-radius:18px;box-shadow:0 10px 25px #3324770b}
+.links h3{font:700 16px "Plus Jakarta Sans";margin-bottom:10px}
+.links a{display:block;color:#5737ef;font-size:14px;line-height:1.9}
+.links a:hover{text-decoration:underline}
+
+/*---footer---*/
+.footer{background:#17132d;color:#fff}
+.footer-container{width:min(1350px,calc(100% - 48px));min-height:132px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-icon{width:46px;height:46px;display:grid;place-items:center;background:#5b35ed;color:#fff;border-radius:14px;font-size:18px}
+.footer h3{font:700 17px "Plus Jakarta Sans"}
+.footer p{font-size:11px;color:#aaa5bf}
+.copyright{margin:0!important}
+
+/*---mobile---*/
+@media(max-width:850px){
+    .nav-container{flex-wrap:wrap;height:auto;padding:10px 0}
+    .site-header{height:auto}
+    nav{order:3;width:100%;overflow:auto;margin:0}
+}
+@media(max-width:600px){
+    .nav-container,.footer-container{width:calc(100% - 28px)}
+    .brand span{display:none}
+    nav a{padding:9px 10px;font-size:12px}
+    .login{padding:11px 15px}
+    .page{width:calc(100% - 24px);padding:35px 10px 45px}
+    .about-card{padding:30px 20px;border-radius:22px}
+    .about-card h1{font-size:27px}
+    .about-card p{font-size:16px}
+    .links{grid-template-columns:1fr;margin-top:25px}
+    .links>div{padding:20px}
+    .footer-container{padding:25px 0;gap:15px}
+}
